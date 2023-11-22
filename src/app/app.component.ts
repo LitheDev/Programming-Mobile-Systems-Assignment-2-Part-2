@@ -1,3 +1,5 @@
+/*** Natalie Young ***/
+
 import {Component} from '@angular/core';
 
 @Component({
