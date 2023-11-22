@@ -1,87 +1,69 @@
+/*** CARDS ***/
 
-
-.menu {
-  /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  width: 100%;
-  flex-wrap: wrap;
-
-}
-
-.card {
-  /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  width: 48%;
-  margin-bottom: 20px; /* Add margin to create space between cards */
-
-}
-
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-/* Add some padding inside the card container */
+/* Card Container */
 .card-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 2px 16px;
+  display: flex; /* Flex */
+  flex-wrap: wrap; /* Wrap to next row if screen gets too small */
+  flex-direction: row; /* Flex direction (Left to right) */
+}
+
+/* Card */
+.card {
+  background-color: #1a2f45;
+  color: #849a9f;
+  margin: 5px;
+  border-radius: 20px;
+  border: 1px solid #deb992;
+  align-content: center;
+}
+
+/* Card: Table Header, Table Data */
+.card th, .card td {
+  text-align: left; /* Align Text Left */
+}
+
+/* Card: Table Header */
+.card th {
+  color: #deb992;
 }
 
 
-.input-box {
-  padding: 2px;
-}
+/* For screens with a maximum width of 720px */
+@media screen and (max-width: 720px) {
 
-.modal {
-  display: none;
-}
-
-
-/* For screens of 600px width or less */
-@media only screen and (max-width:600px)
-{
-
-  .menu
-  {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    width: 94%;
-    flex-wrap: wrap;
-
+  /* Table */
+  table {
+    table-layout: auto;
+    width: 100%;
   }
 
-  .menu input, select {
-    width: 93%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 25px;
-  }
+  /*** CARDS ***/
 
-  .menu button
-  {
-    font-size: 25px;
-  }
-
-  .card
-    {
-      width: 100%;
-      font-size: 26px;
-    }
-
-
+  /* Card Container */
   .card-container {
-    flex-direction: column;
+    max-width: 100%; /* Take the maximum width of the screen */
+    flex-direction: column; /* Flex so entries go underneath eachhother on phone screens */
     align-items: stretch;
   }
 
+  /* Card (Table) */
+  .card table {
+    width: 100%; /* Take the maximum width of the card */
+  }
+
+  /* Card (Table Header, Table Data) */
+  .card th, .card td {
+    padding: 4px; /* Cell Padding: 4px; */
+    text-align: left; /* Align Text Left */
+  }
+
+  /* Card (Heading 2) */
+  .card h2 {
+    text-align: center; /* Align: Center */
+    font-size: 22px; /* Set font size to 22px */
+  }
+
+
+
 
 }
-

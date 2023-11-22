@@ -2,12 +2,16 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `<app-embedded-navbar></app-embedded-navbar>
-  <router-outlet></router-outlet>
-  <app-property-list></app-property-list>`
-  ,
+  template: `
+    <!-- NAVIGATION BAR -->
+    <app-embedded-navbar></app-embedded-navbar>
+
+    <!-- ROUTED CONTENT -->
+    <router-outlet></router-outlet>
+`,
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'my-app';
+export class AppComponent
+{
+  title: string = 'my-app';
 }
